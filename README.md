@@ -1,6 +1,7 @@
 # elasticsearch-docker-compose
 
 # Installing
+```
 wget https://download.docker.com/linux/static/stable/x86_64/docker-19.03.0.tgz
 tar -xvf docker-19.03.0.tgz
 cp docker/* /usr/local/bin/
@@ -12,8 +13,10 @@ docker-compose up		: first cluster start up
 docker-compose down		: destroy the cluster
 docker-compose start	: start the cluster
 docker-compose stop		: stop the cluster
+```
 
 # systemD unit file
+```
 [Unit]
 Description=Docker Application Container Engine
 After=network-online.target firewalld.service
@@ -37,4 +40,4 @@ StartLimitInterval=60s
 
 [Install]
 WantedBy=multi-user.target
-
+```
